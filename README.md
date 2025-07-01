@@ -1,6 +1,7 @@
 # ElevateLabs_Task6_sql
 Author- Darji Chintankumar Dineshchandra
 <br>
+
 # Task 6: Subqueries and Nested Queries in SQL
 
 ## Objective
@@ -49,10 +50,8 @@ CREATE TABLE projects
 ## Queries
 
 ### 1. Use Scalar and Correlated Subqueries
-<br>
 
 > Q1: Employees earning more than the average salary
-<br>
 - (Scaler subquery)
 ```sql
 SELECT name, salary
@@ -68,10 +67,9 @@ WHERE salary > (SELECT AVG(salary) FROM employees e2
 ```
 
 ###  2. Subqueries inside IN, EXISTS, =
-<br>
 
 > Q2: Departments that have employees
-<br>
+
 - (`EXISTS`) -- For each department, check if at least one employee has e.`dep_id` = d.`id`.
   ```sql
   SELECT name
@@ -126,6 +124,8 @@ SELECT name
 FROM employees 
 WHERE salary = (SELECT MAX(salary) FROM employees);
 ```
+<br>
+
 > Q6: List departments with no employees
 - for `IN` oprator, return nothing because of NULL, present in `employees` table
  
