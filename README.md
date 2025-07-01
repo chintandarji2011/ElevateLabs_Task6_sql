@@ -104,7 +104,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees e2
   FROM employees e
   WHERE EXISTS (SELECT 1 FROM departments d WHERE e.dep_id = d.id AND location = 'New York');
   ```
-- (`=`scaler) -- here can not use scaler operator '=' because subqury returns multiple recordes/result but scaler oprator accept only one.
+- (`=`scaler) -- here can not use scaler operator '=' because subqury returns multiple recordes/result but scaler operator accept only one.
  <br> 
 
 > Q4: For each employee, find their salary vs department average (Correlated)
@@ -127,7 +127,7 @@ WHERE salary = (SELECT MAX(salary) FROM employees);
 <br>
 
 > Q6: List departments with no employees
-- for `IN` oprator, return nothing because of NULL, present in `employees` table
+- for `IN` operator, return nothing because of NULL, present in `employees` table
  
 - (EXISTS) -- Here subquery retuens 'true' by `NOT EXISTS` that has no recordes/ rows
 ```sql
