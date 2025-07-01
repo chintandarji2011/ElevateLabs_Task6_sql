@@ -91,7 +91,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees e2
 <br>
 
 > Q3. Names of employees who work in ‘New York’
-<br>
+
 - (`IN`) -- subqury returns all `dep_id` which has `location` 'New York'
   ```sql
   SELECT name
