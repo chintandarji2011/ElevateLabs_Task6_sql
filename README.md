@@ -82,7 +82,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees e2
   FROM departments
   WHERE id IN (SELECT dep_id FROM employees);
   ```
-- `=` (scalar) -- Returns only department name (single value) where employee name is 'Alice'.
+- `=` (scaler) -- Returns only department name (single value) where employee name is 'Alice'.
   ```sql
   SELECT name
   FROM departments
